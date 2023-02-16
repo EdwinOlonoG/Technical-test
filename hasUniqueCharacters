@@ -1,0 +1,12 @@
+function hasUniqueCharactes(cadena){
+  let array = cadena.toLowerCase().split('')
+  for(let i = 0; i < array.length; i++){
+    let char = array.pop()
+    console.log(char)
+    if(array.includes(char)){
+      return false
+    }
+  }
+  return true
+}
+console.log(hasUniqueCharactes("Some String"))
