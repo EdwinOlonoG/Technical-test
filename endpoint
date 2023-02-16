@@ -1,7 +1,14 @@
 
 const express = require('express')
 const app = express()
-const port = 3306
+const port = 3000
+const mysql = require("mysql");
+module.exports = mysql.createPool({
+  host: "precios-1.c0f6dm2ucnlg.us-east-2.rds.amazonaws.com",
+  user: "candidatoPrueba",
+  password: "gaspre21.M",
+  database: "prueba"
+});
 
 app.get('/:id', (req, res) => {
   res.json({
